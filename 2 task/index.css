@@ -29,11 +29,22 @@
   font-weight: 300;
   font-size: 10px;
   width: 150px;
+  margin-top: 7px;
+}
+
+.header {
+  margin-top: 57px;
+}
+
+.header__list {
+  margin-top: 5px;
 }
 
 .header__nav {
   width: 100%;
   max-width: 503px;
+  box-sizing: border-box;
+  margin-right: 96px;
 }
 
 .nav__list {
@@ -62,11 +73,19 @@
 
 .contacts_header {
   display: flex;
+  margin-top: 3.5px;
 }
 
 .contacts__phone {
   font-weight: 500;
   font-size: 16px;
+  margin-right: 46px;
+}
+
+.contacts__messangers {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 
 .motto__header {
@@ -190,6 +209,10 @@
     display: none;
   }
 
+  .header__nav {
+    margin-right: 0;
+  }
+
   .main {
     flex-direction: column;
   }
@@ -198,6 +221,10 @@
 @media (max-width: 540px) {
   .logo {
     display: none;
+  }
+
+  .header {
+    background-color: #1E1E1E;
   }
 }
 
