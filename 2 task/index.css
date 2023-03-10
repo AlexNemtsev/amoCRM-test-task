@@ -1,24 +1,24 @@
 :root {
   --font-color: #E4E5EA;
+  --hover-color: #FCB045;
 }
 
 .body {
   max-width: 1440px;
   margin: 0 auto;
   background: #0E1014;
+  font-family: 'Inter', sans-serif;
+  color: var(--font-color);
 }
 
 .container {
-  max-width: 1140px;
+  box-sizing: border-box;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  justify-content: space-between;
-}
-
-.header {
   display: flex;
-  color: var(--font-color);
+  justify-content: space-between;
 }
 
 .logo__capture {
@@ -40,16 +40,19 @@
 }
 
 .link {
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
   color: var(--font-color);
 }
 
+.navigation__link {
+  transition: color 100ms 100ms;
+}
+
 .navigation__link:hover {
   text-decoration: underline;
-  color: #FCB045;
+  color: var(--hover-color);
 }
 
 .contacts_header {
@@ -57,7 +60,59 @@
 }
 
 .contacts__phone {
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
+}
+
+.motto__header {
+  width: 290px;
+}
+
+.motto__header_highlight {
+  font-weight: 900;
+}
+
+.motto__desc {
+  width: 200px;
+}
+
+.offer {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.offer__header {
+  width: 350px;
+}
+
+.offer__header_highlight {
+  text-transform: uppercase;
+}
+
+.gifts {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 20px;
+
+}
+
+.gifts__header {
+  text-transform: uppercase;
+}
+
+.offer__button {
+  background: aquamarine;
+  color: var(--font-color);
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 50px;
+  transition: color 100ms 100ms;
+}
+
+.offer__button:hover {
+  cursor: pointer;
+  color: var(--hover-color);
 }
