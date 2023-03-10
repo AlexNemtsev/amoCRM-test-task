@@ -28,6 +28,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 10px;
+  width: 150px;
 }
 
 .header__nav {
@@ -88,7 +89,7 @@
 }
 
 .offer__header {
-  width: 350px;
+  max-width: 350px;
 }
 
 .offer__header_highlight {
@@ -128,7 +129,7 @@
 .links {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+
 }
 
 .links__header {
@@ -163,4 +164,68 @@
 
 .legal__link {
   text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .contacts_header {
+    display: none;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links__contacts {
+    text-align: left;
+  }
+
+  .legal {
+    text-align: left;
+  }
+}
+
+@media (max-width: 720px) {
+  .tb-hidden {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer__header {
+    font-size: 20px;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(2, 130px);
+  }
+}
+
+@media (max-width: 400px) {
+  .header__list {
+    text-transform: uppercase;
+  }
+
+  .offer {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .gifts {
+    display: none;
+  }
+
+  .offer__button {
+    display: none;
+  }
 }
