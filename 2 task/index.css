@@ -88,12 +88,23 @@
   width: 120px;
 }
 
+.main {
+  padding-top: 43px;
+}
+
 .motto__header {
   width: 290px;
+  font-size: 48px;
+  font-weight: 400;
 }
 
 .motto__header_highlight {
   font-weight: 900;
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .motto__desc {
