@@ -425,6 +425,16 @@
     font-size: 12px;
   }
 
+  .motto__header {
+    font-size: 36px;
+    margin: 0;
+    padding-top: 53px;
+  }
+
+  .motto__desc {
+    margin-top: 15px;
+  }
+
   .offer {
     text-align: left;
     align-items: flex-start;
