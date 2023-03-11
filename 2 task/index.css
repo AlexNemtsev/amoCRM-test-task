@@ -1,6 +1,7 @@
 :root {
   --font-color: #E4E5EA;
   --hover-color: #FCB045;
+  --bg-color-mob: #1E1E1E;
 }
 
 .body {
@@ -148,12 +149,12 @@
   margin-right: 46px;
 }
 
-.contacts__messangers {
+.contacts__messengers {
   display: flex;
   justify-content: space-between;
 }
 
-.contacts__messangers_header {
+.contacts__messengers_header {
   width: 120px;
 }
 
@@ -323,7 +324,7 @@
   height: 105px;
 }
 
-.contacts__messangers_footer {
+.contacts__messengers_footer {
   width: 80px;
   align-self: flex-end;
   padding-top: 4px;
@@ -364,7 +365,7 @@
     text-align: left;
   }
 
-  .contacts__messangers_footer {
+  .contacts__messengers_footer {
     align-self: flex-start;
   }
 
@@ -397,7 +398,7 @@
   }
 
   .header {
-    background-color: #1E1E1E;
+    background-color: var(--bg-color-mob);
   }
 }
 
@@ -421,6 +422,10 @@
   .header__list {
     text-transform: uppercase;
     font-size: 12px;
+  }
+
+  .main {
+    padding-bottom: 59px;
   }
 
   .motto__header {
@@ -479,5 +484,72 @@
     margin-right: 5px;
     margin-bottom: 2px;
     background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+  }
+
+  .footer {
+    background-color: var(--bg-color-mob);
+    padding-top: 30px;
+  }
+
+  .footer__nav {
+    padding-bottom: 9px;
+  }
+
+  .links__sec {
+    padding-top: 11px;
+  }
+
+  .links__header {
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 19px;
+  }
+
+  .link_ib {
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(2, 120px);
+    column-gap: 28px;
+  }
+
+  .nav__list_col {
+    margin: 0;
+  }
+
+  .nav__item_col {
+    margin: 0;
+    padding-bottom: 7.5px;
+  }
+
+  .contacts__phone_footer {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .contacts__messengers_footer {
+    width: 93px;
+    padding-top: 0;
+  }
+
+  .contacts_footer {
+    height: 81px;
+  }
+
+  .contacts__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .legal {
+    padding-top: 42px;
+    padding-bottom: 60px;
+  }
+
+  .legal__copyright {
+    margin-bottom: 5px;
   }
 }
