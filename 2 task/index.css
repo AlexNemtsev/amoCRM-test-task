@@ -198,7 +198,8 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  margin: 55px 0 0 0;
+  margin: 0;
+  padding-top: 55px;
 }
 
 .offer__header_highlight {
@@ -397,10 +398,6 @@
 }
 
 @media (max-width: 480px) {
-  .offer__header {
-    font-size: 20px;
-  }
-
   .menu-list {
     grid-template-columns: repeat(2, 130px);
   }
@@ -435,6 +432,15 @@
   .offer {
     text-align: left;
     align-items: flex-start;
+  }
+
+  .offer__header {
+    padding-top: 28px;
+  }
+
+  .offer__header_highlight {
+    text-transform: none;
+    letter-spacing: normal;
   }
 
   .gifts {
