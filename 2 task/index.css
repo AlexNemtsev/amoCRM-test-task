@@ -14,6 +14,73 @@
   grid-template-rows: auto 1fr auto;
 }
 
+.bg__ball {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.purple-ball {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%,
+      rgba(236, 208, 255, 0.64) 0%,
+      rgba(161, 93, 207, 0.24) 59.67%,
+      rgba(118, 49, 164, 0.208) 78.59%,
+      rgba(86, 24, 128, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+  left: 60.27%;
+  top: -2px;
+}
+
+.large-red-ball {
+  width: 83px;
+  height: 83px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%,
+      rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+  left: 36.04%;
+  top: 83px;
+}
+
+.small-red-ball {
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(64% 64% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%,
+      rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  filter: blur(2.5px);
+  backdrop-filter: blur(2px);
+  left: 59.1%;
+  top: 547px;
+}
+
+.light {
+  opacity: 0.5;
+  filter: blur(196px);
+}
+
+.purple-light {
+  width: 259px;
+  height: 259px;
+  background: #833AB4;
+  left: 41.82%;
+  top: -154px;
+}
+
+.red-light {
+  width: 311px;
+  height: 311px;
+  background: #961A1A;
+  left: -7.08%;
+  top: 251px;
+}
+
 .container {
   box-sizing: border-box;
   max-width: 1170px;
