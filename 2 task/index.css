@@ -296,8 +296,11 @@
 
 .menu-list {
   display: grid;
-  grid-template-columns: 195px 200px;
-  padding-right: 3px;
+  grid-template-columns: 195px 215px;
+}
+
+.tb-shown {
+  display: none;
 }
 
 .nav__item_col {
@@ -305,7 +308,7 @@
 }
 
 .links__menu {
-  padding-right: 75px;
+  padding-right: 63px;
 }
 
 .links__contacts {
@@ -368,6 +371,10 @@
 @media (max-width: 720px) {
   .tb-hidden {
     display: none;
+  }
+
+  .tb-shown {
+    display: initial;
   }
 
   .header__nav {
