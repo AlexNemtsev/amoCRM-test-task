@@ -119,11 +119,35 @@
 }
 
 .offer__header {
-  max-width: 350px;
+  max-width: 356px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 55px;
 }
 
 .offer__header_highlight {
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.highlight-1 {
+  background: linear-gradient(90deg, #FC893B 36.99%, #FD1D1D 100%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.highlight-2 {
+  background: linear-gradient(90deg, #FCB045 36.99%, #FC6E34 100%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .gifts {
