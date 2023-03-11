@@ -230,6 +230,10 @@
   margin-top: 40px;
 }
 
+.gifts-list {
+  display: none;
+}
+
 .gifts__header {
   text-transform: uppercase;
   font-weight: 500;
@@ -449,5 +453,31 @@
 
   .offer__button {
     display: none;
+  }
+
+  .gifts-list {
+    padding-top: 20px;
+    padding-left: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 9px;
+    row-gap: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+
+  .gifts-list__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .marker {
+    width: 10px;
+    height: 1px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
   }
 }
