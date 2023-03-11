@@ -10,6 +10,7 @@
   background: #0E1014;
   font-family: "Inter", sans-serif;
   color: var(--font-color);
+  overflow-x: hidden;
 }
 
 .bg__ball {
@@ -409,10 +410,61 @@
 }
 
 @media (max-width: 400px) {
+  .purple-light {
+    left: 258px;
+    top: 162.5px
+  }
+
+  .red-light {
+    left: -55px;
+    top: 296.5px;
+  }
+
+  .yellow-light {
+    left: -66px;
+    top: 629.5px;
+    width: 200px;
+    height: 200px;
+    background: #FCB045;
+  }
+
+  .large-red-ball {
+    width: 43px;
+    height: 43px;
+    left: 29px;
+    top: 457.5px;
+  }
+
+  .small-red-ball {
+    width: 18px;
+    height: 18px;
+    left: 278px;
+    top: 673.5px;
+  }
+
+  .purple-ball {
+    width: 40px;
+    height: 40px;
+    left: 296px;
+    top: 291.5px;
+  }
+
+  .yellow-ball {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(84.78% 84.78% at 0% 11.96%,
+        rgba(255, 233, 203, 0.568) 0%, rgba(184, 131, 18, 0.448) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -4px 4px 7px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2.5px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+
   .header {
     padding-top: 15px;
     padding-bottom: 9px;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   .header__nav {
@@ -426,12 +478,18 @@
 
   .main {
     padding-bottom: 59px;
+    padding-top: 0;
+    background: url("./assets/noise.png"), radial-gradient(238.53% 189.02% at 3.2% 3.49%,
+        rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%,
+        rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%,
+        rgba(26, 29, 35, 0) 100%);
+    backdrop-filter: blur(7.5px);
   }
 
   .motto__header {
     font-size: 36px;
     margin: 0;
-    padding-top: 53px;
+    padding-top: 40px;
   }
 
   .motto__desc {
