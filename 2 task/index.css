@@ -33,7 +33,7 @@
 }
 
 .header {
-  margin-top: 57px;
+  padding-top: 57px;
 }
 
 .header__list {
@@ -79,12 +79,18 @@
 .contacts__phone {
   font-weight: 500;
   font-size: 16px;
+}
+
+.contacts__phone_header {
   margin-right: 46px;
 }
 
 .contacts__messangers {
   display: flex;
   justify-content: space-between;
+}
+
+.contacts__messangers_header {
   width: 120px;
 }
 
@@ -184,8 +190,7 @@
   width: 262px;
   height: 61px;
   transition: color 100ms 100ms;
-  position: relative;
-  top: 63px;
+  margin-top: 63px;
 }
 
 .offer__button:hover {
@@ -195,6 +200,7 @@
 
 .footer {
   flex-direction: column;
+  padding-top: 110px;
 }
 
 .links {
@@ -205,6 +211,10 @@
 
 .links__header {
   text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
 }
 
 .footer__nav {
@@ -213,28 +223,60 @@
 
 .nav__list_col {
   flex-direction: column;
+  padding-bottom: 2px;
+  margin-top: 8px;
 }
 
 .menu-list {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
-  column-gap: 20px;
+  grid-template-columns: 195px 200px;
+  padding-right: 3px;
 }
 
 .nav__item_col {
   margin: 5px 0;
 }
 
+.links__menu {
+  padding-right: 75px;
+}
+
 .links__contacts {
   text-align: right;
 }
 
+.contacts_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 105px;
+}
+
+.contacts__messangers_footer {
+  width: 80px;
+  align-self: flex-end;
+  padding-top: 4px;
+}
+
+.contacts__phone_footer {
+  margin-top: 5px;
+}
+
 .legal {
   text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.legal__copyright {
+  margin: 8px 0 7px;
 }
 
 .legal__link {
   text-decoration: underline;
+  font: inherit;
 }
 
 @media (max-width: 1000px) {
