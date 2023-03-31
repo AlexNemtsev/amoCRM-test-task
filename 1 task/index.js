@@ -2,27 +2,21 @@ const inputEl = document.querySelector("input");
 const buttonEl = document.querySelector("button");
 const timerEl = document.querySelector("span");
 
-const formatTime = (time) => {
-  return time <= 9 ? `0${time}` : `${time}`;
-};
-
-const getTimeString = (seconds) => {
-  const hours = Math.floor(seconds / 3600);
-  let secs = seconds - hours * 3600;
-  const minutes = Math.floor(secs / 60);
-  secs -= minutes * 60;
-
-  return `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(secs)}`;
-};
-
 const createTimerAnimator = () => {
   return (seconds) => {
-    function tick() {
-      if (seconds >= 0) {
-        timerEl.textContent = getTimeString(seconds--);
-        setTimeout(() => {
-          tick();
-        }, 1000);
+    // Использование константы correction позволяет на протяжении секунды отображать
+    // начальное время таймера
+    const correction = 999;
+    const finishTime = Date.now() + seconds * 1000 + correction;
+
+    const tick = () => {
+      const currentTime = Date.now();
+      const remainedTime = finishTime - currentTime;
+
+      timerEl.textContent = (new Date(remainedTime)).toLocaleTimeString('ru-RU', { timeZone: 'UTC'});
+
+      if (remainedTime >= correction) {
+        requestAnimationFrame(tick);
       }
     }
 
