@@ -2,17 +2,18 @@ const inputEl = document.querySelector("input");
 const buttonEl = document.querySelector("button");
 const timerEl = document.querySelector("span");
 
-const formatTime = (time) => {
-  return time <= 9 ? `0${time}` : `${time}`;
-};
-
 const getTimeString = (seconds) => {
   const hours = Math.floor(seconds / 3600);
-  let secs = seconds - hours * 3600;
-  const minutes = Math.floor(secs / 60);
-  secs -= minutes * 60;
+  const minutes = Math.floor((seconds - hours * 3600) / 60);
+  const secs = seconds - hours * 3600 - minutes * 60;
 
-  return `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(secs)}`;
+  return (
+    `${hours}`.padStart(2, "0") +
+    ":" +
+    `${minutes}`.padStart(2, "0") +
+    ":" +
+    `${secs}`.padStart(2, "0")
+  );
 };
 
 const createTimerAnimator = () => {
