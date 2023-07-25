@@ -4,22 +4,30 @@ const timerEl = document.querySelector("span");
 
 const createTimerAnimator = () => {
   return (seconds) => {
-    // Использование константы correction позволяет предотвратить пропуск 1-ой секунды
-    // после запуска таймера. Во избежании такого эффекта можно было бы увеличить частоту
-    // обновления анимации, или использовать requestAnimationFrame() вместо setTimeout()
-    const correction = 999;
-    const finishTime = Date.now() + seconds * 1000 + correction;
+    let lastTime = Date.now();
+    const finishTime = lastTime + seconds * 1000;
+    let correction = 0;
 
     const tick = () => {
       const currentTime = Date.now();
+      const delta = currentTime - lastTime;
       const remainedTime = finishTime - currentTime;
 
-      timerEl.textContent = new Date(remainedTime).toLocaleTimeString("ru-RU", {
-        timeZone: "UTC",
-      });
+      console.log(remainedTime);
 
-      if (remainedTime >= correction) {
-        setTimeout(tick, 1000);
+      if (delta >= 1000 + correction && currentTime <= finishTime) {
+        timerEl.textContent = new Date(remainedTime).toLocaleTimeString(
+          "ru-RU",
+          {
+            timeZone: "UTC",
+          }
+        );
+        lastTime = currentTime;
+        correction = 1000 - delta;
+      }
+
+      if (currentTime < finishTime) {
+        requestAnimationFrame(tick);
       }
     };
 
