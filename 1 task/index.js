@@ -4,30 +4,27 @@ const timerEl = document.querySelector("span");
 
 const createTimerAnimator = () => {
   return (seconds) => {
-    let lastTime = Date.now();
-    const finishTime = lastTime + seconds * 1000;
-    let correction = 0;
+    const startTime = Date.now();
+    const finishTime = startTime + seconds * 1000;
+    buttonEl.setAttribute('disabled', 'disabled');
 
     const tick = () => {
       const currentTime = Date.now();
-      const delta = currentTime - lastTime;
       const remainedTime = finishTime - currentTime;
 
-      console.log(remainedTime);
-
-      if (delta >= 1000 + correction && currentTime <= finishTime) {
-        timerEl.textContent = new Date(remainedTime).toLocaleTimeString(
+      if (remainedTime >= 0) {
+        const time = new Date(remainedTime).toLocaleTimeString(
           "ru-RU",
           {
             timeZone: "UTC",
           }
         );
-        lastTime = currentTime;
-        correction = 1000 - delta;
-      }
-
-      if (currentTime < finishTime) {
+        if (timerEl.textContent !== time) {
+          timerEl.textContent = time;
+        }
         requestAnimationFrame(tick);
+      } else {
+        buttonEl.removeAttribute('disabled');
       }
     };
 
